@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*!
+* Start Bootstrap - Creative v7.0.6 (https://startbootstrap.com/theme/creative)
+* Copyright 2013-2022 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
+*/
+/*!
+ * Bootstrap v5.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+/*!
+ * Custom CSS by Zachri
+ * Class name portfolio(s) are replaced with snapshot(s)
+ */
+#snapshot .container-fluid, #snapshot .container-sm, #snapshot .container-md, #snapshot .container-lg, #snapshot .container-xl, #snapshot .container-xxl {
+  max-width: 1920px;
+}
+#snapshot .container-fluid .snapshot-box, #snapshot .container-sm .snapshot-box, #snapshot .container-md .snapshot-box, #snapshot .container-lg .snapshot-box, #snapshot .container-xl .snapshot-box, #snapshot .container-xxl .snapshot-box {
+  position: relative;
+  display: block;
+}
+#snapshot .container-fluid .snapshot-box .snapshot-box-caption, #snapshot .container-sm .snapshot-box .snapshot-box-caption, #snapshot .container-md .snapshot-box .snapshot-box-caption, #snapshot .container-lg .snapshot-box .snapshot-box-caption, #snapshot .container-xl .snapshot-box .snapshot-box-caption, #snapshot .container-xxl .snapshot-box .snapshot-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(244, 98, 58, 0.9);
+  transition: opacity 0.25s ease;
+  text-align: center;
+}
+#snapshot .container-fluid .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-sm .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-md .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-lg .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-xl .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-xxl .snapshot-box .snapshot-box-caption .project-category {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#snapshot .container-fluid .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-sm .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-md .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-lg .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-xl .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-xxl .snapshot-box .snapshot-box-caption .project-name {
+  font-size: 1.2rem;
+}
+#snapshot .container-fluid .snapshot-box:hover .snapshot-box-caption, #snapshot .container-sm .snapshot-box:hover .snapshot-box-caption, #snapshot .container-md .snapshot-box:hover .snapshot-box-caption, #snapshot .container-lg .snapshot-box:hover .snapshot-box-caption, #snapshot .container-xl .snapshot-box:hover .snapshot-box-caption, #snapshot .container-xxl .snapshot-box:hover .snapshot-box-caption {
+  opacity: 1;
+}
