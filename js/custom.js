@@ -3,9 +3,10 @@
 * Copyright 2013-2022 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
 */
-/*!
- * Custom JS by Zachri
- */
+//
+// Custom JS by Zachri (and the Magnificent ChatGPT)
+//
+
 
 
 // Activate SimpleLightbox plugin for snapshot items
@@ -14,53 +15,45 @@ window.addEventListener('DOMContentLoaded', event => {
     new SimpleLightbox({
         elements: '#snapshot a.snapshot-box'
     });
-
 });
 
-// Pass form submissions to GSheet
-window.addEventListener("load", function () {
-    const form = document.querySelector("form");
-    
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      sendData();
-    });
-    function sendData() {
-      const FD = new FormData(form);
+// Fetch the form element
+var form = document.querySelector('.needs-validation');
 
-      let url = form.dataset.gfUrl;
-      for(let [key, value] of FD) {
-        url = url.replace(key, value);
-      }
-      let opts = {
-          method: "POST",
-          mode: "no-cors",
-          redirect: "follow", 
-          referrer: "no-referrer"
-      }
-        return fetch(url, opts);
-    
-    }
+// Add a submit event listener to the form
+form.addEventListener('submit', function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
 
+  // Check if the form is valid
+  if (form.checkValidity() === false) {
+    // If the form is invalid, apply the custom feedback style
+    event.stopPropagation();
+    form.classList.add('was-validated');
+  } else {
+    // If the form is valid, submit the form and show the modal window
+    sendData();
+    $('#staticBackdrop').modal('show');
+  }
 });
 
-// Disable form submissions if there are invalid fields
-(function () {
-    'use strict'
+// Function to submit the form data
+function sendData() {
+  // Create a new FormData object and append the form data
+  const FD = new FormData(form);
 
-  // Fetch all the forms to apply custom Bootstrap validation styles
-  var forms = document.querySelectorAll('.needs-validation')
+  // Replace the placeholders in the form's data-gf-url attribute with the actual form data
+  let url = form.dataset.gfUrl;
+  for (let [key, value] of FD) {
+    url = url.replace(key, value);
+  }
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-        form.classList.add('was-validated')
-      }, false)
-    })
-
-})()
+  // Send the form data to Google Sheets using the fetch API
+  let opts = {
+    method: 'POST',
+    mode: 'no-cors',
+    redirect: 'follow',
+    referrer: 'no-referrer',
+  };
+  return fetch(url, opts);
+}
