@@ -33,7 +33,7 @@ form.addEventListener('submit', function(event) {
   } else {
     // If the form is valid, submit the form and show the modal window
     sendData();
-    $('#staticBackdrop').modal('show');
+    $('#submissionSuccess').modal('show');
   }
 });
 
@@ -57,3 +57,12 @@ function sendData() {
   };
   return fetch(url, opts);
 }
+
+const refreshButton = document.querySelector('#done-button');
+
+const refreshPage = () => {
+  location.reload();
+}
+
+// Refresh page after done-button is clicked
+refreshButton.addEventListener('click', refreshPage)
