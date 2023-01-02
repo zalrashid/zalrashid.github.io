@@ -17,7 +17,7 @@
 
 
 /*!
- * Override border, from 1px to 0px
+ * Override Navbar section's border, from 1px to 0px
  */
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -31,7 +31,7 @@
 
 
 /*!
- * Override box-shadow, from 0 0 0 0.25rem to none
+ * Override Navbar section's box-shadow, from 0 0 0 0.25rem to none
  */
 .navbar-toggler:focus {
   text-decoration: none;
@@ -44,51 +44,51 @@
  * Animated Hamburger Menu
  */
 
-/* Define the shape and color of the hamburger lines */
-.navbar-toggler span {
-  display: block;
-  background-color: white;
-  height: 3px;
-  width: 25px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  position: relative;
-  left: 0;
-  opacity: 1;
-  transition: all 0.35s ease-out;
-  transform-origin: center left;
-}
+  /* Define the shape and color of the hamburger lines */
+  .navbar-toggler span {
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+  }
 
-/* Top line needs a little padding */
-.navbar-toggler span:nth-child(1) {
-  margin-top: 0.3em;
-}
+  /* Top line needs a little padding */
+  .navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+  }
 
-/* Animate into X */
-.navbar-toggler:not(.collapsed) span:nth-child(1) {
-  transform: translate(15%, -33%) rotate(45deg);
-}
+  /* Animate into X */
+  .navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+  }
 
-.navbar-toggler:not(.collapsed) span:nth-child(2) {
-  opacity: 0;
-}
+  .navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+  }
 
-.navbar-toggler:not(.collapsed) span:nth-child(3) {
-  transform: translate(15%, 33%) rotate(-45deg);
-}
+  .navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg);
+  }
 
-/* Animate into Hamburger */
-.navbar-toggler span:nth-child(1) {
-  transform: translate(0%, 0%) rotate(0deg);
-}
+  /* Animate into Hamburger */
+  .navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
 
-.navbar-toggler span:nth-child(2) {
-  opacity: 1;
-}
+  .navbar-toggler span:nth-child(2) {
+    opacity: 1;
+  }
 
-.navbar-toggler span:nth-child(3) {
-  transform: translate(0%, 0%) rotate(0deg);
-}
+  .navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
 
 
 /*!
@@ -123,7 +123,7 @@ header.masthead .masthead-subheading {
 
 
 /*!
- * Override h3 font-style, from italic to normal
+ * Override all h3 font-style, from italic to normal
  */
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
@@ -135,47 +135,7 @@ header.masthead .masthead-subheading {
 
 
 /*!
- * Class name portfolio(s) are replaced with snapshot(s)
- */
-#snapshot .container-fluid, #snapshot .container-sm, #snapshot .container-md, #snapshot .container-lg, #snapshot .container-xl, #snapshot .container-xxl {
-  max-width: 1920px;
-}
-#snapshot .container-fluid .snapshot-box, #snapshot .container-sm .snapshot-box, #snapshot .container-md .snapshot-box, #snapshot .container-lg .snapshot-box, #snapshot .container-xl .snapshot-box, #snapshot .container-xxl .snapshot-box {
-  position: relative;
-  display: block;
-}
-#snapshot .container-fluid .snapshot-box .snapshot-box-caption, #snapshot .container-sm .snapshot-box .snapshot-box-caption, #snapshot .container-md .snapshot-box .snapshot-box-caption, #snapshot .container-lg .snapshot-box .snapshot-box-caption, #snapshot .container-xl .snapshot-box .snapshot-box-caption, #snapshot .container-xxl .snapshot-box .snapshot-box-caption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  opacity: 0;
-  color: #fff;
-  background: rgba(244, 98, 58, 0.9);
-  transition: opacity 0.25s ease;
-  text-align: center;
-}
-#snapshot .container-fluid .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-sm .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-md .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-lg .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-xl .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-xxl .snapshot-box .snapshot-box-caption .project-category {
-  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-#snapshot .container-fluid .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-sm .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-md .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-lg .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-xl .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-xxl .snapshot-box .snapshot-box-caption .project-name {
-  font-size: 1.2rem;
-}
-#snapshot .container-fluid .snapshot-box:hover .snapshot-box-caption, #snapshot .container-sm .snapshot-box:hover .snapshot-box-caption, #snapshot .container-md .snapshot-box:hover .snapshot-box-caption, #snapshot .container-lg .snapshot-box:hover .snapshot-box-caption, #snapshot .container-xl .snapshot-box:hover .snapshot-box-caption, #snapshot .container-xxl .snapshot-box:hover .snapshot-box-caption {
-  opacity: 1;
-}
-
-
-/*!
- * Override timeline-panel padding-right from 20px to 0px
+ * Override Profile section's timeline-panel padding-right from 20px to 0px
  */
 .timeline {
   position: relative;
@@ -343,4 +303,132 @@ header.masthead .masthead-subheading {
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
+}
+
+
+/*!
+ * Override Portfolio section's portfolio-hover background opacity from 0.9 to 0.7
+ */
+#portfolio .portfolio-item {
+  max-width: 26rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#portfolio .portfolio-item .portfolio-link {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 200, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity ease-in-out 0.25s;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  font-size: 1.25rem;
+  color: white;
+}
+#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
+  opacity: 1;
+}
+#portfolio .portfolio-item .portfolio-caption {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #fff;
+}
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
+  font-size: 1.5rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  margin-bottom: 0;
+}
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+  font-style: italic;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.portfolio-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
+.portfolio-modal .modal-content {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+.portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+.portfolio-modal .modal-content p.item-intro {
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.portfolio-modal .modal-content p {
+  margin-bottom: 2rem;
+}
+.portfolio-modal .modal-content ul.list-inline {
+  margin-bottom: 2rem;
+}
+.portfolio-modal .modal-content img {
+  margin-bottom: 2rem;
+}
+.portfolio-modal .close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+.portfolio-modal .close-modal:hover {
+  opacity: 0.3;
+}
+
+
+/*!
+ * Snapshot section: Class name portfolio(s) are replaced with snapshot(s)
+ */
+#snapshot .container-fluid, #snapshot .container-sm, #snapshot .container-md, #snapshot .container-lg, #snapshot .container-xl, #snapshot .container-xxl {
+  max-width: 1920px;
+}
+#snapshot .container-fluid .snapshot-box, #snapshot .container-sm .snapshot-box, #snapshot .container-md .snapshot-box, #snapshot .container-lg .snapshot-box, #snapshot .container-xl .snapshot-box, #snapshot .container-xxl .snapshot-box {
+  position: relative;
+  display: block;
+}
+#snapshot .container-fluid .snapshot-box .snapshot-box-caption, #snapshot .container-sm .snapshot-box .snapshot-box-caption, #snapshot .container-md .snapshot-box .snapshot-box-caption, #snapshot .container-lg .snapshot-box .snapshot-box-caption, #snapshot .container-xl .snapshot-box .snapshot-box-caption, #snapshot .container-xxl .snapshot-box .snapshot-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(255, 200, 0, 0.7);
+  transition: opacity 0.25s ease;
+  text-align: center;
+}
+#snapshot .container-fluid .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-sm .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-md .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-lg .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-xl .snapshot-box .snapshot-box-caption .project-category, #snapshot .container-xxl .snapshot-box .snapshot-box-caption .project-category {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#snapshot .container-fluid .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-sm .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-md .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-lg .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-xl .snapshot-box .snapshot-box-caption .project-name, #snapshot .container-xxl .snapshot-box .snapshot-box-caption .project-name {
+  font-size: 1.2rem;
+}
+#snapshot .container-fluid .snapshot-box:hover .snapshot-box-caption, #snapshot .container-sm .snapshot-box:hover .snapshot-box-caption, #snapshot .container-md .snapshot-box:hover .snapshot-box-caption, #snapshot .container-lg .snapshot-box:hover .snapshot-box-caption, #snapshot .container-xl .snapshot-box:hover .snapshot-box-caption, #snapshot .container-xxl .snapshot-box:hover .snapshot-box-caption {
+  opacity: 1;
 }
