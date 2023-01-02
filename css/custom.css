@@ -358,8 +358,8 @@ header.masthead .masthead-subheading {
   max-width: 100vw;
 }
 .portfolio-modal .modal-content {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   text-align: center;
 }
 .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
@@ -382,15 +382,15 @@ header.masthead .masthead-subheading {
 }
 .portfolio-modal .close-modal {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 3rem;
-  height: 3rem;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
   background-color: transparent;
 }
 .portfolio-modal .close-modal:hover {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 
