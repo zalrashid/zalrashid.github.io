@@ -58,11 +58,11 @@ function sendData() {
   return fetch(url, opts);
 }
 
-const refreshButton = document.querySelector('#done-button');
+const refreshButton = document.querySelector('#submit-done-button');
 
 const refreshPage = () => {
   location.reload();
 }
 
-// Refresh page after done-button is clicked
+// Refresh page after submit-done-button is clicked
 refreshButton.addEventListener('click', refreshPage)
